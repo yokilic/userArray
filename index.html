@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Deneme</title>
+</head>
+<body>
+<script>
+    // Kullanıcıdan alacağımız array'i tanımlıyoruz
+    var userArray = [];
+    // Kullanıcı hiçbirşey yazmayana kadar yazdığı her stringi alıp array'e push ediyoruz
+    do {
+        var userInput = prompt("Lütfen birşeyler yazın");
+        if (userInput != "") {
+            userArray.push(userInput);
+        }
+    } while (userInput !="");
+    // Kullanıcının yazdıklarını alfabetik olarak sıralıyoruz.
+    userArray.sort();
+    // Array elemanları arasına <br /> koyarak her birinin kendi satırında olmasını sağlıyoruz.
+    document.write(userArray.join("<br/>"));
+
+
+</script>
+</body>
+</html>
